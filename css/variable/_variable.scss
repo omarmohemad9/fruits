@@ -1,0 +1,73 @@
+// colors
+$darkCyanGraphicText: hsl(167, 40%, 24%);
+$darkBlueTextP: hsl(198, 62%, 26%);
+$DarkmoderateFooter:hsl(168, 34%, 41%);
+$DarkmoderateFooter2:hsl(168, 54%, 60%);
+$Verydarkblue:hsl(212, 27%, 19%);
+$Darkgrayish:hsl(232, 10%, 55%);
+$Grayishblue:hsl(210, 4%, 67%);
+$White:hsl(0, 0%, 100%);
+$Softred: hsl(7, 99%, 70%);
+$Yellow: hsl(51, 100%, 49%);
+$radius :10px;
+// for devices 
+$phone:768px;
+$ipad:992px;
+// flex
+@mixin flexes($justify, $align, $dir) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    @if $dir==column {
+        flex-direction: column;
+    }
+}
+
+//translate to make anything in center position
+%translateCenter {
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+// for images 
+@mixin coverImg($url) {
+    background-image: url($url);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+// position 
+@mixin position($position, $top, $right, $bottom, $left) {
+    position: $position;
+    top: $top;
+    left: $left;
+    bottom: $bottom;
+    right: $right;
+}
+
+@mixin widthHeight($height, $width) {
+    height: $height;
+    width: $width;
+}
+
+// font weight
+@function weight($every) {
+    @if ($every==small) {
+        @return 600
+    }
+    ;
+    @if ($every==regular) {
+        @return 700
+    }
+    ;
+    @if($every==regular_) {
+        @return 900
+    }
+    ;
+    @if ($every==bold) {
+        @return 900
+    }
+}
