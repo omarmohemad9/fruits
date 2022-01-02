@@ -7,9 +7,9 @@
     }
     
     .head {
-        @include coverImg("/images/desktop/image-header.jpg");
+        @include coverImg("../images/desktop/image-header.jpg");
         @media (max-width: $phone) {
-            background-image: url(/images/mobile/image-header.jpg);
+            background-image: url(../images/mobile/image-header.jpg);
             height: 712px;
         }
         height: 572px;
@@ -238,11 +238,11 @@
                     }
                 }
                 .rightTopContent {
-                    @include coverImg("/images/desktop/image-transform.jpg");
+                    @include coverImg("../images/desktop/image-transform.jpg");
                     flex-basis: 50%;
                     height: 421px;
                     @media (max-width: $phone) {
-                        @include coverImg("/images/mobile/image-transform.jpg");
+                        @include coverImg("../images/mobile/image-transform.jpg");
                         background-position: center;
                         flex-basis: inherit;
                         width: 100%;
@@ -252,12 +252,12 @@
                 }
                 // 2 
                 .leftTopContentImg {
-                    @include coverImg("/images/desktop/image-stand-out.jpg");
+                    @include coverImg("../images/desktop/image-stand-out.jpg");
                     flex-basis: 50%;
                     height: 421px;
                     transition: all 0.5s ease;
                     @media (max-width: $phone) {
-                        @include coverImg("/images/mobile/image-stand-out.jpg");
+                        @include coverImg("../images/mobile/image-stand-out.jpg");
                         background-position: center;
                         flex-basis: inherit;
                         width: 100%;
@@ -326,14 +326,14 @@
                 }
                 .leftContentText {
                     flex-basis: 50%;
-                    @include coverImg("/images/desktop/image-graphic-design.jpg");
+                    @include coverImg("../images/desktop/image-graphic-design.jpg");
                     height: 420px;
                     position: relative;
                     transform: translateX(-500px);
                     opacity: 0;
                     transition: all 2s ease;
                     @media (max-width: $phone) {
-                        @include coverImg("/images/mobile/image-graphic-design.jpg");
+                        @include coverImg("../images/mobile/image-graphic-design.jpg");
                         background-position: top;
                         flex-basis: inherit;
                         width: 100%;
@@ -361,14 +361,14 @@
                 }
                 .rightContentText {
                     flex-basis: 50%;
-                    @include coverImg("/images/desktop/image-photography.jpg");
+                    @include coverImg("../images/desktop/image-photography.jpg");
                     height: 420px;
                     position: relative;
                     transform: translateX(500px);
                     opacity: 0;
                     transition: all 2s ease;
                     @media (max-width: $phone) {
-                        @include coverImg("/images/mobile/image-photography.jpg");
+                        @include coverImg("../images/mobile/image-photography.jpg");
                         background-position: top;
                         flex-basis: inherit;
                         width: 100%;
@@ -485,7 +485,7 @@
             // }
             @each $img in $nums {
                 .p#{$img} {
-                    @include coverImg("/images/desktop/#{$img}.jpg");
+                    @include coverImg("../images/desktop/#{$img}.jpg");
                     background-size: cover;
                     background-position: center;
                     flex-basis: (100% / 4);

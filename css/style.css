@@ -40,7 +40,7 @@ html {
 }
 
 .head {
-  background-image: url("/images/desktop/image-header.jpg");
+  background-image: url("../images/desktop/image-header.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 572px;
@@ -48,7 +48,7 @@ html {
 
 @media (max-width: 768px) {
   .head {
-    background-image: url(/images/mobile/image-header.jpg);
+    background-image: url(../images/mobile/image-header.jpg);
     height: 712px;
   }
 }
@@ -316,7 +316,7 @@ html {
 }
 
 .content .container .topcontentC .rightTopContent {
-  background-image: url("/images/desktop/image-transform.jpg");
+  background-image: url("../images/desktop/image-transform.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   flex-basis: 50%;
@@ -325,7 +325,7 @@ html {
 
 @media (max-width: 768px) {
   .content .container .topcontentC .rightTopContent {
-    background-image: url("/images/mobile/image-transform.jpg");
+    background-image: url("../images/mobile/image-transform.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -337,7 +337,7 @@ html {
 }
 
 .content .container .topcontentC .leftTopContentImg {
-  background-image: url("/images/desktop/image-stand-out.jpg");
+  background-image: url("../images/desktop/image-stand-out.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   flex-basis: 50%;
@@ -347,7 +347,7 @@ html {
 
 @media (max-width: 768px) {
   .content .container .topcontentC .leftTopContentImg {
-    background-image: url("/images/mobile/image-stand-out.jpg");
+    background-image: url("../images/mobile/image-stand-out.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -432,7 +432,7 @@ html {
 
 .content .container .lastContent .leftContentText {
   flex-basis: 50%;
-  background-image: url("/images/desktop/image-graphic-design.jpg");
+  background-image: url("../images/desktop/image-graphic-design.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 420px;
@@ -444,7 +444,7 @@ html {
 
 @media (max-width: 768px) {
   .content .container .lastContent .leftContentText {
-    background-image: url("/images/mobile/image-graphic-design.jpg");
+    background-image: url("../images/mobile/image-graphic-design.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
@@ -479,7 +479,7 @@ html {
 
 .content .container .lastContent .rightContentText {
   flex-basis: 50%;
-  background-image: url("/images/desktop/image-photography.jpg");
+  background-image: url("../images/desktop/image-photography.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 420px;
@@ -491,7 +491,7 @@ html {
 
 @media (max-width: 768px) {
   .content .container .lastContent .rightContentText {
-    background-image: url("/images/mobile/image-photography.jpg");
+    background-image: url("../images/mobile/image-photography.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
@@ -613,7 +613,7 @@ html {
 }
 
 .imagesSection .container .p1 {
-  background-image: url("/images/desktop/1.jpg");
+  background-image: url("../images/desktop/1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-size: cover;
@@ -653,7 +653,7 @@ html {
 }
 
 .imagesSection .container .p2 {
-  background-image: url("/images/desktop/2.jpg");
+  background-image: url("../images/desktop/2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-size: cover;
@@ -693,7 +693,7 @@ html {
 }
 
 .imagesSection .container .p3 {
-  background-image: url("/images/desktop/3.jpg");
+  background-image: url("../images/desktop/3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-size: cover;
@@ -733,7 +733,7 @@ html {
 }
 
 .imagesSection .container .p4 {
-  background-image: url("/images/desktop/4.jpg");
+  background-image: url("../images/desktop/4.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-size: cover;
