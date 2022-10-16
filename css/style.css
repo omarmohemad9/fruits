@@ -31,7 +31,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: ui-sans-serif;
+  font-family: sans-serif;
 }
 
 html {
@@ -637,7 +637,7 @@ html {
   animation-timing-function: ease;
   animation-iteration-count: 1;
   animation-direction: alternate;
-  animation-delay: 1s;
+  animation-delay: 0.3s;
 }
 
 @keyframes img {
@@ -677,7 +677,7 @@ html {
   animation-timing-function: ease;
   animation-iteration-count: 1;
   animation-direction: alternate;
-  animation-delay: 1s;
+  animation-delay: 0.3s;
 }
 
 @keyframes img {
@@ -717,7 +717,7 @@ html {
   animation-timing-function: ease;
   animation-iteration-count: 1;
   animation-direction: alternate;
-  animation-delay: 1s;
+  animation-delay: 0.3s;
 }
 
 @keyframes img {
@@ -757,7 +757,7 @@ html {
   animation-timing-function: ease;
   animation-iteration-count: 1;
   animation-direction: alternate;
-  animation-delay: 1s;
+  animation-delay: 0.3s;
 }
 
 @keyframes img {

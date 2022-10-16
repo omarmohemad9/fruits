@@ -2,24 +2,25 @@
 const HidBtn = document.getElementById("pageHid");
 const pageHid = document.querySelector(".phoneU");
 
-HidBtn.onclick = function() {
-    pageHid.classList.toggle("active");
+HidBtn.onclick = function () {
+  pageHid.classList.toggle("active");
 };
 setTimeout(() => {
-    document.getElementById("textHead").classList.add("active");
+  document.getElementById("textHead").classList.add("active");
 }, 500);
 
 // scroll to button
 let btnScroll = document.getElementById("scrolto");
-btnScroll.onclick = function() {
-    window.scrollTo(0, 577);
+btnScroll.onclick = function () {
+  window.scrollTo(0, 577);
+  section_Text();
 };
 // transition
 
 let leftTopContent = document.querySelector(".leftTopContent");
 
 setTimeout(() => {
-    leftTopContent.classList.add("active");
+  leftTopContent.classList.add("active");
 }, 100);
 
 let rightTopContent2 = document.querySelector(".rightTopContent2");
@@ -39,57 +40,61 @@ let boxs2 = document.querySelector(".boxs .boxes:first-of-type");
 let num = 150;
 
 window.addEventListener("scroll", () => {
-    // section text
-    let offs = this.pageYOffset;
-    let Ytext = rightTopContent2.offsetTop;
-    if (Ytext - rightTopContent2.offsetHeight < offs) {
-        rightTopContent2.classList.add("active");
+  let offs = window.pageYOffset;
+
+  // section text
+  section_Text();
+  // last section
+  if (scrollS - sections.getBoundingClientRect().height * 2 < offs) {
+    sections.classList.add("active");
+  }
+  if (scrollS2 - sections.getBoundingClientRect().height * 2 < offs) {
+    sectionsRight.classList.add("active");
+  }
+
+  // before last section
+  boxs.forEach((es) => {
+    let scrolled = es.getBoundingClientRect().top;
+    // console.log(boxs2.offsetTop);
+    if (scrolled < offs - es.getBoundingClientRect().height) {
+      es.classList.add("active");
+      // console.log("seee");
     }
-    // last section
-    if (scrollS - sections.offsetHeight < offs) {
-        sections.classList.add("active");
-    } else {
-        sections.classList.remove("active");
-    }
-    if (scrollS2 - sections.offsetHeight < offs) {
-        sectionsRight.classList.add("active");
-    } else {
-        sectionsRight.classList.remove("active");
+  });
+
+  // images before the footer
+  let imgParent = document.querySelector(".imagesSection #con");
+  let img = document.querySelectorAll(".imagesSection #con div");
+
+  // if (rightTopContent2.offsetTop - rightTopContent2.offsetHeight < offs) {
+  // }
+  // console.log(imgParent);
+
+  img.forEach((el) => {
+    let scroller = imgParent.getBoundingClientRect().top;
+    console.log(scroller);
+
+    if (
+      imgParent.offsetTop - imgParent.getBoundingClientRect().height - 300 <
+      offs
+    ) {
+      el.classList.add("active");
     }
 
-    // before last section
-    boxs.forEach((es) => {
-        let scrolled = es.offsetTop;
-        // console.log(boxs2.offsetTop);
-        if (scrolled - es.offsetHeight < offs) {
-            es.classList.add("active");
-            // console.log("seee");
-        } else {
-            es.classList.remove("active");
-        }
+    // console.log(scroller - e.offsetHeight, offs);
+    el.addEventListener("animationend", () => {
+      img.forEach((ele) => {
+        ele.style.transform = "scale(1)";
+      });
     });
-
-    // images before the footer
-    let imgParent = document.querySelector(".imagesSection #con");
-    let img = document.querySelectorAll(".imagesSection #con div");
-
-    // if (rightTopContent2.offsetTop - rightTopContent2.offsetHeight < offs) {
-    // }
-    // console.log(imgParent);
-
-    img.forEach((el) => {
-        let scroller = imgParent.offsetTop;
-        console.log(scroller);
-
-        if (imgParent.offsetTop - imgParent.offsetHeight - 300 < offs) {
-            el.classList.add("active");
-        }
-
-        // console.log(scroller - e.offsetHeight, offs);
-        el.addEventListener("animationend", () => {
-            img.forEach((ele) => {
-                ele.style.transform = "scale(1)";
-            });
-        });
-    });
+  });
 });
+
+function section_Text() {
+  let offs = window.pageYOffset;
+  console.log(offs);
+  let Ytext = rightTopContent2.getBoundingClientRect().top;
+  if (Ytext < offs) {
+    rightTopContent2.classList.add("active");
+  }
+}
